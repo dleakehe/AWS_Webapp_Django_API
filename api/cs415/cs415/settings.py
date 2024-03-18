@@ -30,12 +30,6 @@ ALLOWED_HOSTS = ['*']
 CORS_ALLOWED_ORIGIN = ['*']
 CORS_ORIGIN_ALLOW_ALL = True
 
-[cid:95f6200f-c307-49e9-a423-da40de35e628]
-
-[cid:2cdaf79c-b6ab-4c5f-a9b8-a9352b24ffbb]
-
-
-
 CORS_ORIGIN_WHITELIST = (
    
     "http://localhost:8000",

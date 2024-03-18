@@ -93,4 +93,4 @@ class User(models.Model):
         db_table = 'User'
 
     def __str__(self):
-        return f'{self.username}'
+        return f'{self.first_name}'
