@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from cs415.models import Characters, Classskills, Classes, Raceskills, Races, User
+from cs415.models import Characters, Classskills, Classes, Raceskills, Races, User, Skills
 
 class CharactersSerializer(serializers.ModelSerializer):
     class Meta:
@@ -29,4 +29,9 @@ class RacesSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
             model = User
+            fields = '__all__'
+
+class SkillsSerializer(serializers.ModelSerializer):
+    class Meta:
+            model = Skills
             fields = '__all__'

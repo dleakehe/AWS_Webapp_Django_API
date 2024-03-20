@@ -12,6 +12,8 @@ class Characters(models.Model):
     classid = models.ForeignKey('Classes', models.DO_NOTHING, db_column='classID')  # Field name made lowercase.
     user = models.ForeignKey('User', models.DO_NOTHING)
     level = models.IntegerField(blank=True, null=True)
+    raceskill = models.CharField(max_length=30, blank=True, null=True)
+    classskill = models.CharField(max_length=30, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -40,7 +42,9 @@ class Classskills(models.Model):
 class Classes(models.Model):
     classid = models.AutoField(db_column='classID', primary_key=True)  # Field name made lowercase.
     classname = models.CharField(db_column='className', max_length=30, blank=True, null=True)  # Field name made lowercase.
-    classbonus = models.CharField(db_column='classBonus', max_length=30, blank=True, null=True)  # Field name made lowercase.
+    classbonus1 = models.CharField(db_column='classBonus1', max_length=30, blank=True, null=True)  # Field name made lowercase.
+    classbonus2 = models.CharField(db_column='classBonus2', max_length=30, blank=True, null=True)
+    classbonus3 = models.CharField(db_column='classBonus3', max_length=30, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -69,7 +73,9 @@ class Raceskills(models.Model):
 class Races(models.Model):
     raceid = models.AutoField(db_column='raceID', primary_key=True)  # Field name made lowercase.
     racename = models.CharField(db_column='raceName', max_length=30, blank=True, null=True)  # Field name made lowercase.
-    racebonus = models.CharField(db_column='raceBonus', max_length=30, blank=True, null=True)  # Field name made lowercase.
+    racebonus1 = models.CharField(db_column='raceBonus1', max_length=30, blank=True, null=True)  # Field name made lowercase.
+    racebonus2 = models.CharField(db_column='raceBonus2', max_length=30, blank=True, null=True)
+    racebonus3 = models.CharField(db_column='raceBonus3', max_length=30, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -77,6 +83,20 @@ class Races(models.Model):
 
     def __str__(self):
         return f'{self.racename}'
+    
+class Skills(models.Model):
+    skill_id = models.AutoField(db_column='skill_id', primary_key=True)  # Field name made lowercase.
+    skill = models.CharField(max_length=30, blank=True, null=True)
+    roll = models.CharField(max_length=30, blank=True, null=True)
+    skilltype = models.CharField(db_column='skillType', max_length=30, blank=True, null=True)  # Field name made lowercase.
+    magic = models.CharField(max_length=30, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'Skills'
+
+    def __str__(self):
+        return f'{self.skill}'
 
 
 class User(models.Model):

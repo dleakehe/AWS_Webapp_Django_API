@@ -16,6 +16,15 @@ CREATE TABLE RaceSkills(
     FOREIGN KEY (raceID) REFERENCES Races(raceID)
 );
 
+CREATE TABLE Skills(
+    skill_id INT NOT NULL AUTO_INCREMENT,
+    skill VARCHAR(30),
+    roll VARCHAR(30),
+    skillType VARCHAR(30),
+    magic VARCHAR(30),
+    PRIMARY KEY (skill_id)
+);
+
 CREATE TABLE Classes(
     classID INT NOT NULL AUTO_INCREMENT,
     className VARCHAR(30),

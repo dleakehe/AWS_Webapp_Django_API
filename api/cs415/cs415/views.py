@@ -1,8 +1,8 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from cs415.models import User, Characters, Classskills, Classes, Raceskills, Races
-from cs415.serializers import UserSerializer, CharactersSerializer, ClassskillsSerializer, ClassesSerializer, RaceskillsSerializer, RacesSerializer
+from cs415.models import User, Characters, Classskills, Classes, Raceskills, Races, Skills
+from cs415.serializers import UserSerializer, CharactersSerializer, ClassskillsSerializer, ClassesSerializer, RaceskillsSerializer, RacesSerializer, SkillsSerializer
 from cs415.settings import JWT_AUTH
 from cs415.authentication import JWTAuthentication
 import datetime
@@ -67,6 +67,21 @@ class GetSingleUserAPIView(APIView):
         characters = CharactersSerializer(Characters.objects.filter(user_id=user.user_id), many=True)
         user_data.update({"characters": characters.data})
         return Response(user_data)
+
+class SkillsAPIView(APIView):
+    def get(self, request):
+        if JWT_AUTH: JWTAuthentication.authenticate(self,request=request)
+        skills = Skills.objects.all()
+        serializer = SkillsSerializer(skills, many=True)
+        return Response({'skills': serializer.data})
+
+    def post(self, request, *args, **kwargs):
+        serializer = SkillsSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({'data': serializer.data})
+        else:
+            return Response({'errors': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
 class CharactersAPIView(APIView):
     def get(self,request):

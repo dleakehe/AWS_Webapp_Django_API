@@ -33,4 +33,5 @@ urlpatterns = [
     path('races/race/<str:races>', views.GetSingleRaceAPIView.as_view()),
     path('characters/', views.CharactersAPIView.as_view()),
     path('characters/character/<int:id>', views.GetSingleCharacterAPIView.as_view()),
+    path('skills/', views.SkillsAPIView.as_view())
 ]
