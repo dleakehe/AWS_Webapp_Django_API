@@ -1,7 +1,9 @@
 CREATE TABLE Races(
     raceID INT NOT NULL AUTO_INCREMENT,
     raceName VARCHAR(30),
-    raceBonus VARCHAR(30),
+    raceBonus1 VARCHAR(30),
+    raceBonus2 VARCHAR(30),
+    raceBonus3 VARCHAR(30),
     PRIMARY KEY (raceID)
 );
 
@@ -28,7 +30,9 @@ CREATE TABLE Skills(
 CREATE TABLE Classes(
     classID INT NOT NULL AUTO_INCREMENT,
     className VARCHAR(30),
-    classBonus VARCHAR(30),
+    classBonus1 VARCHAR(30),
+    classBonus2 VARCHAR(30),
+    classBonus3 VARCHAR(30),
     PRIMARY KEY (classID)
 );
 
@@ -45,9 +49,11 @@ CREATE TABLE ClassSkills(
 
 CREATE TABLE User(
     user_id INT NOT NULL AUTO_INCREMENT,
-    username VARCHAR(30),
+    first_name VARCHAR(30),
+    last_name VARCHAR(30),
     pass VARCHAR(30),
-    characterID INT NOT NULL,
+    email VARCHAR(30),
+    last_login VARCHAR(30),
     PRIMARY KEY (user_id)
 );
 
@@ -59,6 +65,8 @@ CREATE TABLE Characters(
     skill1 VARCHAR(30),
     skill2 VARCHAR(30),
     skill3 VARCHAR(30),
+    raceskill VARCHAR(30),
+    classskill VARCHAR(30),
     raceID INT NOT NULL,
     classID INT NOT NULL,
     user_id INT NOT NULL,
