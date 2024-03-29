@@ -1,3 +1,5 @@
+USE cs415website;
+
 CREATE TABLE Races(
     raceID INT NOT NULL AUTO_INCREMENT,
     raceName VARCHAR(30),
