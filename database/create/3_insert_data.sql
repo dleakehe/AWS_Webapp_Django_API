@@ -1,35 +1,5 @@
 USE cs415website;
 
-INSERT INTO Characters(charName, class, race, skill1, skill2, skill3, raceID, classID, user_id, raceskill, classskill)
-    VALUES (
-        'Karlagh',
-        'Barbarian',
-        'Tiefling',
-        'Cleave',
-        'Frenzied Throw',
-        'Wolf Spirit',
-        2,
-        2,
-        1,
-        'Avernus Flame',
-        'Frenzy'
-    );
-
-INSERT INTO Characters(charName, class, race, skill1, skill2, skill3, raceID, classID, user_id, raceskill, classskill)
-    VALUES (
-        'Astarion',
-        'Thief',
-        'Elf',
-        'Sneak Attack',
-        'Shadow Step',
-        'Enshroud',
-        1,
-        1,
-        1,
-        'Fey Step',
-        'Quick Action'
-    );
-
 INSERT INTO Classes(className, classBonus1, classBonus2, classBonus3)
     VALUES(
         'Thief',
@@ -187,5 +157,33 @@ INSERT INTO User(user_id, first_name,pass,last_name, pass, email)
         'danny@email.com',
     );
 
+INSERT INTO Characters(charName, class, race, skill1, skill2, skill3, raceID, classID, user_id, raceskill, classskill)
+    VALUES (
+        'Karlagh',
+        'Barbarian',
+        'Tiefling',
+        'Cleave',
+        'Frenzied Throw',
+        'Wolf Spirit',
+        2,
+        2,
+        1,
+        'Avernus Flame',
+        'Frenzy'
+    );
 
+INSERT INTO Characters(charName, class, race, skill1, skill2, skill3, raceID, classID, user_id, raceskill, classskill)
+    VALUES (
+        'Astarion',
+        'Thief',
+        'Elf',
+        'Sneak Attack',
+        'Shadow Step',
+        'Enshroud',
+        1,
+        1,
+        1,
+        'Fey Step',
+        'Quick Action'
+    );
 
