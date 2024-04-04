@@ -93,7 +93,7 @@ INSERT INTO Races (raceName, raceBonus1, raceBonus2, raceBonus3)
 INSERT INTO Races (raceName, raceBonus1, raceBonus2, raceBonus3)
     VALUES (
         'Tiefling',
-        'Avernus Flame'
+        'Avernus Flame',
         'Darkvision', 
         'Infernal Legacy'
     );
