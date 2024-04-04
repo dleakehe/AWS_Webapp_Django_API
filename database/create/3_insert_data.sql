@@ -1,3 +1,5 @@
+USE cs415website;
+
 INSERT INTO Characters(charName, class, race, skill1, skill2, skill3, raceID, classID, user_id, raceskill, classskill)
     VALUES (
         'Karlagh',
