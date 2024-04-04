@@ -23,3 +23,16 @@ INSERT INTO Characters(charName, class, race, skill1, skill2, skill3, raceID, cl
         1,
         1
     );
+
+INSERT INTO Classes(className, classBonus)
+    VALUES(
+        'Thief',
+        'Quick Action'
+    );
+
+INSERT INTO Classes(className, classBonus)
+    VALUES(
+        'Barbarian',
+        'Frenzy'
+    );
+
