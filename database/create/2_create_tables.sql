@@ -64,6 +64,7 @@ CREATE TABLE Characters(
     charName VARCHAR(30),
     class VARCHAR(30),
     race  VARCHAR(30),
+    level INT NOT NULL,
     skill1 VARCHAR(30),
     skill2 VARCHAR(30),
     skill3 VARCHAR(30),

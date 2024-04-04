@@ -157,11 +157,12 @@ INSERT INTO User(user_id, first_name, last_name, pass, email)
         'danny@email.com'
     );
 
-INSERT INTO Characters(charName, class, race, skill1, skill2, skill3, raceID, classID, user_id, raceskill, classskill)
+INSERT INTO Characters(charName, class, race, level, skill1, skill2, skill3, raceID, classID, user_id, raceskill, classskill)
     VALUES (
         'Karlagh',
         'Barbarian',
         'Tiefling',
+        12,
         'Cleave',
         'Frenzied Throw',
         'Wolf Spirit',
@@ -172,11 +173,12 @@ INSERT INTO Characters(charName, class, race, skill1, skill2, skill3, raceID, cl
         'Frenzy'
     );
 
-INSERT INTO Characters(charName, class, race, skill1, skill2, skill3, raceID, classID, user_id, raceskill, classskill)
+INSERT INTO Characters(charName, class, race, level, skill1, skill2, skill3, raceID, classID, user_id, raceskill, classskill)
     VALUES (
         'Astarion',
         'Thief',
         'Elf',
+        8,
         'Sneak Attack',
         'Shadow Step',
         'Enshroud',
