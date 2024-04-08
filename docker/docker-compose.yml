@@ -3,7 +3,7 @@ services:
   cs415-api-ec2db:
     build: https://github.com/dleakehe/cs415Project.git#container:api/cs415
     image: image_cs415_api_ec2db
-    container_name: dc_cs415_api
+    container_name: dc_cs415_api_ec2db
     restart: always
     #networks:
     # - cs415-network
