@@ -99,8 +99,8 @@ DATABASES = {
         'NAME': 'cs415website',
         'USER': 'apiuser',
         'PASSWORD': 'apiuserpass',
-        #'HOST': '52.5.35.193',
-        'HOST': 'cs415-database',
+        'HOST': '52.5.35.193',
+        #'HOST': 'cs415-database',
         'PORT': '3306'
     }
 }
