@@ -1,8 +1,0 @@
-    <Directory /home/ubuntu/cs415_api/cs415>
-        <Files wsgi.py>
-            Require all granted
-        </Files>
-    </Directory>
-    WSGIDaemonProcess cs415 python-home=/home/ubuntu/cs415_api/env python-path=/home/ubuntu/cs415_api
-    WSGIProcessGroup cs415
-    WSGIScriptAlias / /home/ubuntu/cs415_api/cs415/wsgi.py
