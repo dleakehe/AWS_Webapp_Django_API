@@ -7,4 +7,4 @@ In the live version of the app, the database is hosted on an AWS EC2 Instance an
 The API files are found in api/cs415/cs415. The API is a collection of endpoints created using Django.
 The API takes requests from the front end and communicates with the database. It is meant to be hosted in an Amazon Elastic Container.
 
-The front end can be found in the AWS_Webapp_Django_Website repo.
+The front end can be found in the AWS_Webapp_React_Website repo.
