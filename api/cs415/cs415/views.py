@@ -89,6 +89,14 @@ class CharactersAPIView(APIView):
         characters = Characters.objects.all()
         serializer = CharactersSerializer(characters, many=True)
         return Response({'characters': serializer.data})
+    
+    def post(self, request):
+        serializer = CharactersSerializer(data=request.daat)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({'data': serializer.data})
+        else:
+            return Response({'errors': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
 class GetSingleCharacterAPIView(APIView):
     def get(self,request,id):

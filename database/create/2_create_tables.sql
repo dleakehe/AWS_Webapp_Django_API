@@ -70,12 +70,8 @@ CREATE TABLE Characters(
     skill3 VARCHAR(30),
     raceskill VARCHAR(30),
     classskill VARCHAR(30),
-    raceID INT NOT NULL,
-    classID INT NOT NULL,
     user_id INT NOT NULL,
     PRIMARY  KEY (characterID), 
-    FOREIGN KEY (raceID) REFERENCES Races(raceID),
-    FOREIGN KEY (classID) REFERENCES Classes(classID),
     FOREIGN KEY (user_id) REFERENCES User(user_id)
 );
 
